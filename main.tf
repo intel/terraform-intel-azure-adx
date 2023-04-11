@@ -3,9 +3,10 @@ data "azurerm_kusto_cluster" "example" {
   resource_group_name = "test_resource_group"
 }
 
+#Azure ADX Cluster
 resource "azurerm_resource_group" "example" {
   name     = "my-kusto-cluster-rg"
-  location = "West Europe"
+  location = "East US"
 }
 
 resource "azurerm_kusto_cluster" "example" {
@@ -19,6 +20,6 @@ resource "azurerm_kusto_cluster" "example" {
   }
 
   tags = {
-    Environment = "Production"
+    Owner = "dave.shrestha@intel.com"
   }
 }
