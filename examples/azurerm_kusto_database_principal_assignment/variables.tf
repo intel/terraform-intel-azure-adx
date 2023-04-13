@@ -23,22 +23,12 @@ variable "adx_sku" {
 ####    Required    ####
 ########################
 
+#Resource group name
 variable "resource_group_name" {
-  description = "Existing Resource Group where databricks reosurce will be created."
+  description = "Resource Group where resource will be created. It should already exist"
   type        = string
 }
 
 ########################
 ####     Other      ####
 ########################
-variable "principal_timeouts" {
-  type = object({
-    create = optional(string, null)
-    read = optional(string, null)
-    delete = optional(string, null)
-  })
-  description = "Map of timeouts that can be adjusted when executing the module. This allows you to customize how long certain operations are allowed to take before being considered to have failed."
-  default = {
-    principal_timeouts = {}
-  }
-}
