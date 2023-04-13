@@ -1,15 +1,19 @@
-data "azurerm_resource_group" "azure-kusto" {
+data "azurerm_resource_group" "kustorg" {
   name = var.resource_group_name
 }
 
-resource "azurerm_kusto_cluster" "azure-kusto" {
-  name                = "shresthakustocluster"
-  location            = data.azurerm_resource_group.azure-kusto.location
-  resource_group_name = data.azurerm_resource_group.azure-kusto.name
+resource "azurerm_kusto_cluster" "kustocluster" {
+  name                = "dskustocluster"
+  location            = data.azurerm_resource_group.kustorg.location
+  resource_group_name = data.azurerm_resource_group.kustorg.name
 
   sku {
-    name     = "Standard_D13_v2"
-    capacity = 2
+    name     = var.adx_sku
+  }
+  
+  optimized_auto_scale {
+    minimum_instances     = 2
+    maximum_instances = 4
   }
 
   tags = {
