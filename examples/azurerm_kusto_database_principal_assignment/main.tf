@@ -24,6 +24,19 @@ resource "azurerm_kusto_cluster" "kustocluster" {
     "Owner"     = "dave.shrestha@intel.com"
  }
 }
+
+resource "azurerm_kusto_cluster_principal_assignment" "kustoprincipal" {
+  name                = "KustoPrincipalAssignment"
+  resource_group_name = data.azurerm_resource_group.kustorg.name
+  cluster_name        = azurerm_kusto_cluster.kustocluster.name
+
+  tenant_id      = data.azurerm_client_config.current.tenant_id
+  principal_id   = var.principal_id
+  principal_type = "User"
+  role           = "AllDatabasesAdmin"
+
+}
+  
 resource "azurerm_kusto_database" "kustodatabase" {
   name                = "dskustodatabase"
   resource_group_name = data.azurerm_resource_group.kustorg.name
@@ -32,17 +45,4 @@ resource "azurerm_kusto_database" "kustodatabase" {
 
   hot_cache_period   = "P7D"
   soft_delete_period = "P31D"
-}
-
-resource "azurerm_kusto_database_principal_assignment" "principal" {
-  name                = "KustoPrincipalAssignment"
-  resource_group_name = data.azurerm_resource_group.kustorg.name
-  cluster_name        = azurerm_kusto_cluster.kustocluster.name
-  database_name       = azurerm_kusto_database.kustodatabase.name
-
-  tenant_id      = data.azurerm_client_config.current.tenant_id
-  principal_id   = data.azurerm_client_config.current.client_id
-  principal_type = "User"
-  role           = "Admin"
-
 }
