@@ -9,12 +9,12 @@ output "kusto_cluster_uri {
 }
 
 output "kusto_cluster_data_ingestion_uri {
-  description = "ID of the Kusto Cluster URI"
+  description = "Kusto Data Ingestion URI"
   value       = azurerm_kusto_cluster.kustocluster.data_ingestion_uri
 }
 
 output "kusto_cluster_name" {
-  description = "Name of the Kusto Cluster Principle"
+  description = "Name of the Kusto Cluster"
   value       = azurerm_kusto_cluster_principal_assignment.kustoprincipal.cluster_name"
 }
 
@@ -24,12 +24,12 @@ output "kusto_cluster_principal_name" {
 }
 
 output "kusto_rg_name" {
-  description = "Name of the Kusto Cluster Principle"
+  description = "Name of the Kusto Cluster Resource Group"
   value       = azurerm_kusto_cluster_principal_assignment.kustoprincipal.resource_group_name
 }
 
 output "kusto_tenant_id" {
-  description = "Name of the Kusto Cluster Principle"
+  description = "ID of the Kusto Cluster Principle"
   value       = azurerm_kusto_cluster_principal_assignment.kustoprincipal.tenant_id"
 
 output "kusto_tenant_name" {
