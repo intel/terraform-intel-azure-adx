@@ -31,7 +31,7 @@ resource "azurerm_kusto_cluster_principal_assignment" "kustoprincipal" {
   cluster_name        = azurerm_kusto_cluster.kustocluster.name
 
   tenant_id      = data.azurerm_client_config.current.tenant_id
-  principal_id   = "dave.shrestha@intel.com"
+  principal_id   = var.principal_id
   principal_type = "User"
   role           = "AllDatabasesAdmin"
 
