@@ -9,7 +9,7 @@ resource "azurerm_kusto_cluster" "kustocluster" {
   engine              = "V3"
 
   sku {
-    name     = "Standard_D13_v2"
+    name     = var.adx_sku
   }
   
   optimized_auto_scale {
