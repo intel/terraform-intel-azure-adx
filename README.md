@@ -80,7 +80,7 @@ More Information regarding deploying Azure Data Explorer can be found here:[Azur
 | Name | Description |
 |------|-------------|
 | <a name="output_kusto_sku"></a> [kusto\_sku](#output\_kusto\_sku) | Kusto Cluster SKU. |
-| <a name="output_kusto_cluster_uri"></a> [kusto\cluster\uri](#output\_kusto\_cluster\_uri) | Kusto Cluster URI. |
+| <a name="output_kusto_cluster_uri"></a> [kusto\_cluster\_uri](#output\_kusto\_cluster\_uri) | Kusto Cluster URI. |
 | <a name="output_kusto_cluster_data_ingestion_uri"></a> [dbx\_create\_bucket](#output\_dbx\_create\_bucket) | Kusto Data Ingestion URI. |
 | <a name="output_kusto_cluster_name"></a> [dbx\_create\_role](#output\_dbx\_create\_role) | Name of the Kusto Cluster. |
 | <a name="output_kusto_cluster_principal_name"></a> [dbx\_credentials\_name](#output\_dbx\_credentials\_name) | Name of the Kusto Cluster Principle. |
