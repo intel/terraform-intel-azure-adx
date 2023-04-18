@@ -44,7 +44,7 @@ terraform apply
 Note that this example may create resources. Run `terraform destroy` when you don't need these resources anymore.
 
 ## Considerations  
-More Information regarding deploying Azure Data Explorer can be found here:[Azure Data Explorer] (https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kusto_database_principal_assignment#attributes-reference)
+More Information regarding deploying Azure Data Explorer can be found here:[Azure Data Explorer](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kusto_database_principal_assignment#attributes-reference)
 !-- BEGIN_TF_DOCS -->
 ## Requirements
 
