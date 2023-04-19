@@ -1,5 +1,3 @@
-
-
 <p align="center">
   <img src="./images/logo-classicblue-800px.png" alt="Intel Logo" width="250"/>
 </p>
