@@ -94,41 +94,47 @@ More Information regarding deploying Azure Data Explorer can be found here:[Azur
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_azurerm"></a> [aws](#requirement\_aws) | ~> 3.52.0 |
-| <a name="requirement_random"></a> [random](#requirement\_random) | ~> 3.4.3 |
-| <a name="requirement_time"></a> [time](#requirement\_time) | ~> 0.9.1 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=1.3.0 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~>3.52.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_azurerm"></a> [aws](#requirement\_aws) | ~> 3.52.0 |
-| <a name="provider_random"></a> [random](#provider\_random) | ~> 3.4.3 |
-| <a name="provider_time"></a> [time](#provider\_time) | ~> 0.9.1 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~>3.52.0 |
 
 ## Modules
 
-| Name | Source | Version |
-|------|--------|---------|
-| <a name="module_gis"></a> [gis](#module\_gis) | ./global_init_scripts | n/a |
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [azurerm_kusto_cluster.kustocluster](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kusto_cluster) | resource |
+| [azurerm_kusto_cluster_principal_assignment.kustoprincipal](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kusto_cluster_principal_assignment) | resource |
+| [azurerm_kusto_database.kustodatabase](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kusto_database) | resource |
+| [azurerm_client_config.current](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/client_config) | data source |
+| [azurerm_resource_group.kustorg](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/resource_group) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name\_arn) | The name of the Azure Resoure Group that will be used to deploy Azure Data Explorer cluster and related resources. This Resource Group should already exist. | `string` | `""` | Yes |
-| <a name="sku"></a> [sku](#input\_sku) | The sku for the Azure Data Explorer cluser instances. Intel recommendation is to use Standard_ SKUs for compute and storage optimazed instances. | `string` | `"Standard_E8d_v5"` | Yes |
-| <a name="input_principal_id"></a> [principal\_id](#input\_principal\_id) | The User or Principal ID to grant access to the cluster and database. The prinicpal id should already exist. | `string` | `""` | Yes |
+| <a name="input_adx_sku"></a> [adx\_sku](#input\_adx\_sku) | Instance SKU, see comments above for guidance | `string` | `"Standard_E2d_v5"` | no |
+| <a name="input_principal_id"></a> [principal\_id](#input\_principal\_id) | The User or Principal ID to grant access to the cluster and database. The prinicpal id should already exist | `string` | n/a | yes |
+| <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | Existing Resource Group where databricks reosurce will be created. | `string` | n/a | yes |
+
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_kusto_sku"></a> [kusto\_sku](#output\_kusto\_sku) | Kusto Cluster SKU. |
-| <a name="output_kusto_cluster_uri"></a> [kusto\_cluster\_uri](#output\_kusto\_cluster\_uri) | Kusto Cluster URI. |
-| <a name="output_kusto_cluster_data_ingestion_uri"></a> [dbx\_create\_bucket](#output\_dbx\_create\_bucket) | Kusto Data Ingestion URI. |
-| <a name="output_kusto_cluster_name"></a> [dbx\_create\_role](#output\_dbx\_create\_role) | Name of the Kusto Cluster. |
-| <a name="output_kusto_cluster_principal_name"></a> [dbx\_credentials\_name](#output\_dbx\_credentials\_name) | Name of the Kusto Cluster Principle. |
-| <a name="output_kusto_rg_name"></a> [dbx\_host](#output\_dbx\_host) | Name of the Kusto Cluster Resource Group. |
-| <a name="output_kusto_tenant_id"></a> [dbx\_id](#output\_dbx\_id) | ID of the Kusto Cluster Principle. |
-| <a name="output_kusto_tenant_name"></a> [dbx\_security\_group\_ids](#output\_dbx\_security\_group\_ids) | Name of the Kusto Cluster Principle. |
+| <a name="output_kusto_cluster_data_ingestion_uri"></a> [kusto\_cluster\_data\_ingestion\_uri](#output\_kusto\_cluster\_data\_ingestion\_uri) | Kusto Data Ingestion URI |
+| <a name="output_kusto_cluster_name"></a> [kusto\_cluster\_name](#output\_kusto\_cluster\_name) | Name of the Kusto Cluster |
+| <a name="output_kusto_cluster_principal_name"></a> [kusto\_cluster\_principal\_name](#output\_kusto\_cluster\_principal\_name) | Name of the Kusto Cluster Principle |
+| <a name="output_kusto_cluster_uri"></a> [kusto\_cluster\_uri](#output\_kusto\_cluster\_uri) | Kusto Cluster URI |
+| <a name="output_kusto_rg_name"></a> [kusto\_rg\_name](#output\_kusto\_rg\_name) | Name of the Kusto Cluster Resource Group |
+| <a name="output_kusto_sku"></a> [kusto\_sku](#output\_kusto\_sku) | Kusto Cluster SKU |
+| <a name="output_kusto_tenant_id"></a> [kusto\_tenant\_id](#output\_kusto\_tenant\_id) | ID of the Kusto Cluster Principle |
+| <a name="output_kusto_tenant_name"></a> [kusto\_tenant\_name](#output\_kusto\_tenant\_name) | Name of the Kusto Cluster Principle |
 <!-- END_TF_DOCS -->
