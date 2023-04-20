@@ -9,12 +9,57 @@
 ## Azure Data Explorer
 The module can deploy an Azure Data Explorer cluster on Intel recommended Azure instances. Instance Selection have been defaulted in the code.
 
-**Learn more about Itel Recommended Instances:**
-[OLTP Performance on Azure ESV5 Instances](https://www.intel.com/content/www/us/en/partner/workload/microsoft/sql-server-oltp-azure-esv5-benchmark.html)
-[Gen-on-Gen perormance improvement of Azure D-series instances](https://www.intel.com/content/www/us/en/partner/workload/microsoft/azure-dv4-vms-outperform-dv3-benchmark.html)
-[Gen-on-Gen performance improvement of Azure Ls-series instances](https://www.intel.com/content/www/us/en/partner/workload/microsoft/data-analytics-azure-lsv3-vs-lsv1-benchmark.html)
-[SQL Server performance on Intel Intances](https://www.intel.com/content/www/us/en/partner/workload/microsoft/sql-analysis-127-faster-on-azure-benchmark.html)
-[SQL Server Snapshot](https://www.intel.com/content/www/us/en/partner/workload/microsoft/msft-sql-server-snapshot.html)
+## Performance Data
+
+<center>
+
+#### [SQL OLTP Performance on Azure Es_v5-series instances](https://www.intel.com/content/www/us/en/partner/workload/microsoft/sql-server-oltp-azure-esv5-benchmark.html)
+
+<p align="center">
+  <a href="https://www.intel.com/content/www/us/en/partner/workload/microsoft/sql-server-oltp-azure-esv5-benchmark.html">
+  <img src="../../images/Esv5_vs_Esv4_SQL.png?raw=true" alt="ADX" width="600"/>
+  </a>
+</p>
+
+#
+
+#### [Microsoft SQL Server Overview and Benefits on Eds_v5 Intel](https://www.intel.com/content/www/us/en/partner/workload/microsoft/msft-sql-server-snapshot.html)
+
+<p align="center">
+  <a href="https://www.intel.com/content/www/us/en/partner/workload/microsoft/msft-sql-server-snapshot.html">
+  <img src="../../images/Edsv5_vs_Edsv4_SQL.png?raw=true" alt="ADX" width="600"/>
+  </a>
+</p>
+#### [MySQL Server performance on Dds_v5 Intel Intances vs Dds_v4 Instances](https://www.intel.com/content/www/us/en/partner/workload/microsoft/sql-analysis-127-faster-on-azure-benchmark.html)
+
+<p align="center">
+  <a href="https://www.intel.com/content/www/us/en/partner/workload/microsoft/sql-analysis-127-faster-on-azure-benchmark.html">
+  <img src="../../images/Ddsv5_vs_Ddsv4_MySQL.png?raw=true" alt="ADX" width="600"/>
+  </a>
+</p>
+
+#
+#### [Gen-on-Gen MySQL perormance improvement of Azure Dv4-series instances vs Dv3 Instances](https://www.intel.com/content/www/us/en/partner/workload/microsoft/azure-dv4-vms-outperform-dv3-benchmark.html)
+
+<p align="center">
+  <a href="https://www.intel.com/content/www/us/en/partner/workload/microsoft/azure-dv4-vms-outperform-dv3-benchmark.html">
+  <img src="../../images/Dv4_vs_Dv3_MySQL.png?raw=true" alt="ADX2" width="600"/>
+  </a>
+</p>
+
+#
+
+#### [Gen-on-Gen performance improvement of Azure Ls-series instances](https://www.intel.com/content/www/us/en/partner/workload/microsoft/data-analytics-azure-lsv3-vs-lsv1-benchmark.html)
+
+<p align="center">
+  <a href="https://www.intel.com/content/www/us/en/partner/workload/microsoft/data-analytics-azure-lsv3-vs-lsv1-benchmark.html">
+  <img src="../../images/Lsv3_vs_Lsv1_Analytics.png?raw=true" alt="ADX" width="600"/>
+  </a>
+</p>
+
+
+
+</center>
 
 ## Usage
 
