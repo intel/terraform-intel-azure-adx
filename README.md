@@ -85,7 +85,8 @@ terraform apply
 
 ```
 
-Note that this example may create resources. Run `terraform destroy` when you don't need these resources anymore.
+Note that this example creates resources. Run `terraform destroy` when you don't need these resources anymore.
+Also note that it will take approx 10-15min to complete the deployment of the examples with cluster and database principal assignments.
 
 ## Considerations  
 More Information regarding deploying Azure Data Explorer can be found here:[Azure Data Explorer](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kusto_database_principal_assignment#attributes-reference)
