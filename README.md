@@ -7,8 +7,25 @@
 © Copyright 2022, Intel Corporation
 
 ## Azure Data Explorer
-The module can deploy an Azure Data Explorer cluster on Intel recommended Azure instances. Instance Selection have been defaulted in the code.
+The module can deploy an Azure Data Explorer cluster on Intel recommended Azure instances. Instance Selection have been defaulted in the code. 
 
+For Compute Optimized instances, we recommend:
+Standard_E2d_v5 (default)
+Standard_E4d_v5 
+Standard_E8d_v5 
+Standard_E16d_v5 
+
+For Storage Optimized instances, we recommend:
+Standard_L8sv3 
+Standard_L16sv3 
+Standard_L32sv3 
+Standard_E2sv5 
+Standard_E4sv5
+Standard_E8sv5
+Standard_E16sv5
+
+For Isolated instances, we recommend:
+E80idsv4 
 
 ## Performance Data
 
