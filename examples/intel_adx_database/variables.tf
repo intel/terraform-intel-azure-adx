@@ -2,7 +2,7 @@
 ####     Intel      ####
 ########################
 
-#ADX SKU
+#Intel Recommended ADX SKU
 #The E-v5, and Lsv3-series run on the 3rd Generation Intel® Xeon® Platinum 8370C (Ice Lake), the Intel® Xeon® Platinum 8272CL (Cascade Lake) processors, or the Intel® Xeon® Platinum 8168 (Skylake) processors.
 # For Compute Optimized instances, we rcommend  - Standard_Ed_v5 (2,4,8,16 vcpu example: Standard_E16d_v5)  
 # For Storage Optimized instances, we recommend - Standard_Lsv3 (8,16, 32 vcpu - example: Standard_L32s_v3), or Standard_Esv5 (2,4,8,16 vcpu- example: Standard_E16s_v5) 
@@ -14,6 +14,7 @@
 # Azure Docs:  https://www.intel.com/content/www/us/en/partner/workload/microsoft/msft-sql-server-snapshot.html
 # Azure Docs:  https://www.intel.com/content/www/us/en/partner/workload/microsoft/sql-server-oltp-azure-esv5-benchmark.html
 
+# For SKU recommendation see above for Intel Recommended ADX SKU
 variable "adx_sku" {
   description = "Instance SKU, see comments above for guidance"
   type        = string
