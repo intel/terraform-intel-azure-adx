@@ -1,9 +1,14 @@
+#You will need to specify a pre-existing Azure Resource Gorup in the Region you want to deploy the Azure Data Explorer Cluter into
 data "azurerm_resource_group" "kustorg" {
   name = var.resource_group_name
 }
 
 data "azurerm_client_config" "current" {}
 
+#This will deploy V3 of the Azure Data Explorer aka Kusto Cluster in Azure
+#You can sepcify Intel Recommended ADX SKU- (See README.MD for details) the default is Standard_E2d_v5
+#Default configuration for ADX Cluster is to have Auto-Scaling Turned ON with min of 2 and max of 4 instances
+#Make sure to set your owner to your own value
 resource "azurerm_kusto_cluster" "kustocluster" {
   name                = "dskustocluster"
   location            = data.azurerm_resource_group.kustorg.location
