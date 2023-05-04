@@ -14,28 +14,10 @@
 # Azure Docs:  https://www.intel.com/content/www/us/en/partner/workload/microsoft/msft-sql-server-snapshot.html
 # Azure Docs:  https://www.intel.com/content/www/us/en/partner/workload/microsoft/sql-server-oltp-azure-esv5-benchmark.html
 
-# For SKU recommendation see above for Intel Recommended ADX SKU
-variable "adx_sku" {
-  description = "Instance SKU, see comments above for guidance"
-  type        = string
-  default     = "Standard_E2d_v5"
-}
-
 ########################
 ####    Required    ####
 ########################
 
-#Resource group name
-variable "resource_group_name" {
-  description = "Resource Group where resource will be created. It should already exist"
-  type        = string
-}
-
-#Principal ID
-variable "principal_id" {
-  description = "The User or Principal ID to grant access to the cluster and database. The prinicpal id should already exist"
-  type        = string
-}
 
 ########################
 ####     Other      ####

@@ -18,7 +18,7 @@
 variable "adx_sku" {
   description = "Instance SKU, see comments above for guidance"
   type        = string
-  default     = "Standard_E2d_v5"
+  default     = "Standard_E8d_v5"
 }
 
 ########################
@@ -34,6 +34,18 @@ variable "resource_group_name" {
 variable "principal_id" {
   description = "The User or Principal ID to grant access to the cluster and database. The prinicpal id should already exist"
   type        = string
+}
+#Autoscale minimum_instances
+variable "minimum_instances" {
+  description = "The User or Principal ID to grant access to the cluster and database. The prinicpal id should already exist"
+  type        = string
+  default     = "2"
+}
+#Autoscale maximum_instances
+variable "maximum_instances" {
+  description = "The User or Principal ID to grant access to the cluster and database. The prinicpal id should already exist"
+  type        = string
+  default     = "4"
 }
 
 ########################
