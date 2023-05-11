@@ -32,8 +32,12 @@ resource "azurerm_kusto_cluster" "kustocluster" {
    }
 }
 
+#Random ID
+resource "random_id" "rid" {
+  byte_length = 5
+}
 resource "azurerm_kusto_cluster_principal_assignment" "kustoprincipal" {
-  name                = "KustoPrincipalAssignment"
+  name                = "KustoPrincipalAssignment-${random_id.rid.dec}"
   resource_group_name = data.azurerm_resource_group.kustorg.name
   cluster_name        = azurerm_kusto_cluster.kustocluster.name
 
@@ -45,7 +49,7 @@ resource "azurerm_kusto_cluster_principal_assignment" "kustoprincipal" {
 }
   
 resource "azurerm_kusto_database" "kustodatabase" {
-  name                = "dskustodatabase"
+  name                = "dskustodatabase-${random_id.rid.dec}"
   resource_group_name = data.azurerm_resource_group.kustorg.name
   location            = data.azurerm_resource_group.kustorg.location
   cluster_name        = azurerm_kusto_cluster.kustocluster.name
