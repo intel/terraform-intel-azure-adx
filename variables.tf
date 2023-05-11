@@ -21,6 +21,25 @@ variable "adx_sku" {
   default     = "Standard_E8d_v5"
 }
 
+variable "enable_intel_tags" {
+  type    = bool
+    default = true
+  description = "If true adds additional Intel tags to resources"
+}
+variable "tags" {
+  default     = {}
+  type        = map(string)
+  description = "A mapping of tags to assign to all resources."
+}
+variable "intel_tags" {
+  default     = {
+    intel-registry = "https://registry.terraform.io/namespaces/intel"
+    intel-module   = "terraform-intel-azure-adx"
+  }
+  type        = map(string)
+  description = "Intel Tags"
+}
+
 ########################
 ####    Required    ####
 ########################

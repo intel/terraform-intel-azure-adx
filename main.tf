@@ -1,3 +1,8 @@
+locals {
+   #If the enable_intel_tags is true, then additional Intel tags will be added to the resources created
+  tags = var.enable_intel_tags ? merge(var.intel_tags, var.tags) : var.tags
+}
+
 #Use the existing Azure Resource Gorup in the Region you want to deploy the Azure Data Explorer Cluter 
 data "azurerm_resource_group" "kustorg" {
   name = var.resource_group_name
@@ -15,6 +20,7 @@ resource "azurerm_kusto_cluster" "kustocluster" {
   location            = data.azurerm_resource_group.kustorg.location
   resource_group_name = data.azurerm_resource_group.kustorg.name
   engine              = "V3"
+  tags                = local.tags
 
   sku {
     name     = var.adx_sku

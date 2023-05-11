@@ -111,7 +111,7 @@ terraform apply
 Note that this example may create resources. Run `terraform destroy` when you don't need these resources anymore.
 
 ## Considerations  
-More Information regarding deploying Azure Data Explorer can be found here:[Azure Data Explorer](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kusto_database_principal_assignment#attributes-reference)
+More information regarding deploying Azure Data Explorer can be found here:[Azure Data Explorer](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kusto_database_principal_assignment#attributes-reference)
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
@@ -146,7 +146,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_adx_sku"></a> [adx\_sku](#input\_adx\_sku) | Instance SKU, see comments above for guidance | `string` | `"Standard_E2d_v5"` | no |
 | <a name="input_principal_id"></a> [principal\_id](#input\_principal\_id) | The User or Principal ID to grant access to the cluster and database. The prinicpal id should already exist | `string` | n/a | yes |
-| <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | Existing Resource Group where databricks reosurce will be created. | `string` | n/a | yes |
+| <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | Existing Resource Group where Azure Data Explorer reosurce will be created. | `string` | n/a | yes |
 
 ## Outputs
 
