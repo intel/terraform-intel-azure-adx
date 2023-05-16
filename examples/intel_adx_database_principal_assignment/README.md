@@ -41,7 +41,7 @@ The Lsv3-series of Azure Virtual Machines (Azure VMs) features high-throughput, 
 
 <p align="center">
   <a href="https://www.intel.com/content/www/us/en/partner/workload/microsoft/sql-server-oltp-azure-esv5-benchmark.html">
-  <img src="../../images/Esv5_vs_Esv4_SQL.png?raw=true" alt="ADX" width="600"/>
+  <img src="https://github.com/intel/terraform-intel-azure-adx/images/Esv5_vs_Esv4_SQL.png?raw=true" alt="ADX" width="600"/>
   </a>
 </p>
 
@@ -51,14 +51,14 @@ The Lsv3-series of Azure Virtual Machines (Azure VMs) features high-throughput, 
 
 <p align="center">
   <a href="https://www.intel.com/content/www/us/en/partner/workload/microsoft/msft-sql-server-snapshot.html">
-  <img src="../../images/Edsv5_vs_Edsv4_SQL.png?raw=true" alt="ADX" width="600"/>
+  <img src="https://github.com/intel/terraform-intel-azure-adx/images/Edsv5_vs_Edsv4_SQL.png?raw=true" alt="ADX" width="600"/>
   </a>
 </p>
 #### [MySQL Server performance on Dds_v5 Intel Intances vs Dds_v4 Instances](https://www.intel.com/content/www/us/en/partner/workload/microsoft/sql-analysis-127-faster-on-azure-benchmark.html)
 
 <p align="center">
   <a href="https://www.intel.com/content/www/us/en/partner/workload/microsoft/sql-analysis-127-faster-on-azure-benchmark.html">
-  <img src="../../images/Ddsv5_vs_Ddsv4_MySQL.png?raw=true" alt="ADX" width="600"/>
+  <img src="https://github.com/intel/terraform-intel-azure-adx/images/Ddsv5_vs_Ddsv4_MySQL.png?raw=true" alt="ADX" width="600"/>
   </a>
 </p>
 
@@ -67,7 +67,7 @@ The Lsv3-series of Azure Virtual Machines (Azure VMs) features high-throughput, 
 
 <p align="center">
   <a href="https://www.intel.com/content/www/us/en/partner/workload/microsoft/azure-dv4-vms-outperform-dv3-benchmark.html">
-  <img src="../../images/Dv4_vs_Dv3_MySQL.png?raw=true" alt="ADX2" width="600"/>
+  <img src="https://github.com/intel/terraform-intel-azure-adx/images/Dv4_vs_Dv3_MySQL.png?raw=true" alt="ADX2" width="600"/>
   </a>
 </p>
 
@@ -77,7 +77,7 @@ The Lsv3-series of Azure Virtual Machines (Azure VMs) features high-throughput, 
 
 <p align="center">
   <a href="https://www.intel.com/content/www/us/en/partner/workload/microsoft/data-analytics-azure-lsv3-vs-lsv1-benchmark.html">
-  <img src="../../images/Lsv3_vs_Lsv1_Analytics.png?raw=true" alt="ADX" width="600"/>
+  <img src="https://github.com/intel/terraform-intel-azure-adx/images/Lsv3_vs_Lsv1_Analytics.png?raw=true" alt="ADX" width="600"/>
   </a>
 </p>
 
@@ -86,8 +86,6 @@ The Lsv3-series of Azure Virtual Machines (Azure VMs) features high-throughput, 
 </center>
 
 ## Usage
-
-See examples folder for code ./examples/intel_adx_database_principal_assignment/main.tf
 
 All the examples in example folder shows how to create an Azure Data Explorer clusterusing this module. Additionally, some of the examples display how to create an Azure Data Explorer cluster with cluser principal assignment, a cluster with database and a cluster with database with principal assignments.
 

@@ -41,7 +41,7 @@ The Lsv3-series of Azure Virtual Machines (Azure VMs) features high-throughput, 
 
 <p align="center">
   <a href="https://www.intel.com/content/www/us/en/partner/workload/microsoft/sql-server-oltp-azure-esv5-benchmark.html">
-  <img src="https://github.com/intel/terraform-intel-azure-adx/tree/main/images/Esv5_vs_Esv4_SQL.png?raw=true" alt="ADX" width="600"/>
+  <img src="https://github.com/intel/terraform-intel-azure-adx/images/Esv5_vs_Esv4_SQL.png?raw=true" alt="ADX" width="600"/>
   </a>
 </p>
 
