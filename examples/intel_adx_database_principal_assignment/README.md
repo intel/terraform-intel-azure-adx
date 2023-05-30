@@ -86,9 +86,21 @@ The Lsv3-series of Azure Virtual Machines (Azure VMs) features high-throughput, 
 </center>
 
 ## Usage
+Example of main.tf (located in the examples sub-folder)
+```hcl
 
-All the examples in example folder shows how to create an Azure Data Explorer clusterusing this module. Additionally, some of the examples display how to create an Azure Data Explorer cluster with cluser principal assignment, a cluster with database and a cluster with database with principal assignments.
+## This module deploys a Azure Data Explorer with assigned pricipal in a user provided resource group
 
+module "azure-dataexplorer" {
+  source                = "intel/azure-adx"
+  resource_group_name   = "DS-KUSTO-RG1"
+  adx_sku               = "Standard_E8d_v5"
+  principal_id          = "dave.shrestha@intel.com"
+  tags = {
+    Owner    = "user@company.com"
+    Duration = "4"
+  }
+}
 **Usage Considerations**
 
 <p>
