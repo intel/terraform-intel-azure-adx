@@ -54,6 +54,9 @@ The Lsv3-series of Azure Virtual Machines (Azure VMs) features high-throughput, 
   <img src="https://github.com/intel/terraform-intel-azure-adx/images/Edsv5_vs_Edsv4_SQL.png?raw=true" alt="ADX" width="600"/>
   </a>
 </p>
+
+#
+  
 #### [MySQL Server performance on Dds_v5 Intel Intances vs Dds_v4 Instances](https://www.intel.com/content/www/us/en/partner/workload/microsoft/sql-analysis-127-faster-on-azure-benchmark.html)
 
 <p align="center">
@@ -63,6 +66,7 @@ The Lsv3-series of Azure Virtual Machines (Azure VMs) features high-throughput, 
 </p>
 
 #
+  
 #### [Gen-on-Gen MySQL perormance improvement of Azure Dv4-series instances vs Dv3 Instances](https://www.intel.com/content/www/us/en/partner/workload/microsoft/azure-dv4-vms-outperform-dv3-benchmark.html)
 
 <p align="center">
@@ -80,9 +84,6 @@ The Lsv3-series of Azure Virtual Machines (Azure VMs) features high-throughput, 
   <img src="https://github.com/intel/terraform-intel-azure-adx/images/Lsv3_vs_Lsv1_Analytics.png?raw=true" alt="ADX" width="600"/>
   </a>
 </p>
-
-
-
 </center>
 
 ## Usage
