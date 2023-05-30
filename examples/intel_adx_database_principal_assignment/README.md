@@ -86,7 +86,7 @@ The Lsv3-series of Azure Virtual Machines (Azure VMs) features high-throughput, 
 </center>
 
 ## Usage
-Example of main.tf (located in the examples sub-folder)
+Example of main.tf 
 ```hcl
 
 ## This module deploys a Azure Data Explorer with assigned pricipal in a user provided resource group
