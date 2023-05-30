@@ -95,7 +95,7 @@ module "azure-dataexplorer" {
   source                = "intel/azure-adx"
   resource_group_name   = "DS-KUSTO-RG1"
   adx_sku               = "Standard_E8d_v5"
-  principal_id          = "dave.shrestha@intel.com"
+  principal_id          = "user@company.com"
   tags = {
     Owner    = "user@company.com"
     Duration = "4"
