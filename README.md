@@ -7,7 +7,7 @@
 © Copyright 2022, Intel Corporation
 
 ## Azure Data Explorer
-The module can deploy an Azure Data Explorer cluster on Intel recommended Azure instances. Instance Selection have been defaulted in the code. 
+The module can deploy an Azure Data Explorer cluster on Intel recommended Azure instances. Instance Selection have been defaulted in the code. This module was intended to be ran with an Intel Sentinel Policy as Code module that can be found here: https://registry.terraform.io/policies/intel/intel-azure/latest
 
 For Compute Optimized instances, we recommend:
 Standard_E2d_v5 (default)
