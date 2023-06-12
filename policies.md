@@ -19,7 +19,7 @@ Esv5-series virtual machines run on the 3rd Generation Intel® Xeon® Platinum 8
 
 The Lsv3-series of Azure Virtual Machines (Azure VMs) features high-throughput, low latency, directly mapped local NVMe storage. These VMs run on the 3rd Generation Intel® Xeon® Platinum 8370C (Ice Lake) processor in a hyper-threaded configuration. This new processor features an all-core turbo clock speed of 3.5 GHz with Intel® Turbo Boost Technology, Intel® Advanced-Vector Extensions 512 (Intel® AVX-512) and Intel® Deep Learning Boost.
 
-Resource type:  
+Resource type: azurerm_kusto_cluster
 # For Compute Optimized instances, we recommend:
 Standard_E2d_v5
 Standard_E4d_v5 
