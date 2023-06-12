@@ -37,7 +37,3 @@ Standard_E16sv5
 
 # For Isolated instances, we recommend:
 E80idsv4 
-
-Parameter:  **Add the Parameter. This will be removed !**
-
-Allowed Types :  **Add allowed resource types of the policy. This will be removed !**
