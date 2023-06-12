@@ -137,13 +137,14 @@ More information regarding deploying Azure Data Explorer can be found here:[Azur
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=1.3.0 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~>3.52.0 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~>3.52 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~>3.52.0 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~>3.52 |
+| <a name="provider_random"></a> [random](#provider\_random) | n/a |
 
 ## Modules
 
@@ -156,6 +157,7 @@ No modules.
 | [azurerm_kusto_cluster.kustocluster](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kusto_cluster) | resource |
 | [azurerm_kusto_cluster_principal_assignment.kustoprincipal](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kusto_cluster_principal_assignment) | resource |
 | [azurerm_kusto_database.kustodatabase](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kusto_database) | resource |
+| [random_id.rid](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/id) | resource |
 | [azurerm_client_config.current](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/client_config) | data source |
 | [azurerm_resource_group.kustorg](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/resource_group) | data source |
 
@@ -163,9 +165,14 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_adx_sku"></a> [adx\_sku](#input\_adx\_sku) | Instance SKU, see comments above for guidance | `string` | `"Standard_E2d_v5"` | no |
+| <a name="input_adx_sku"></a> [adx\_sku](#input\_adx\_sku) | Instance SKU, see comments above for guidance | `string` | `"Standard_E8d_v5"` | no |
+| <a name="input_enable_intel_tags"></a> [enable\_intel\_tags](#input\_enable\_intel\_tags) | If true adds additional Intel tags to resources | `bool` | `true` | no |
+| <a name="input_intel_tags"></a> [intel\_tags](#input\_intel\_tags) | Intel Tags | `map(string)` | <pre>{<br>  "intel-module": "terraform-intel-azure-adx",<br>  "intel-registry": "https://registry.terraform.io/namespaces/intel"<br>}</pre> | no |
+| <a name="input_maximum_instances"></a> [maximum\_instances](#input\_maximum\_instances) | The User or Principal ID to grant access to the cluster and database. The prinicpal id should already exist | `string` | `"4"` | no |
+| <a name="input_minimum_instances"></a> [minimum\_instances](#input\_minimum\_instances) | The User or Principal ID to grant access to the cluster and database. The prinicpal id should already exist | `string` | `"2"` | no |
 | <a name="input_principal_id"></a> [principal\_id](#input\_principal\_id) | The User or Principal ID to grant access to the cluster and database. The prinicpal id should already exist | `string` | n/a | yes |
-| <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | Existing Resource Group where Azure Data Explorer reosurce will be created. | `string` | n/a | yes |
+| <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | Existing Resource Group where databricks reosurce will be created. | `string` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | A mapping of tags to assign to all resources. | `map(string)` | `{}` | no |
 
 ## Outputs
 
