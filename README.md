@@ -103,18 +103,9 @@ module "azure-dataexplorer" {
   }
 }
 
-**Usage Considerations**
-
-<p>
-
 * **Prerequisites:**
 
   1. Have an existing Azure Resource Group in the region you want to deploy the Azure Data Explorer cluster 
-
-# Provision Intel Cloud Optimization Module
-module "module-example" {
-  source = "github.com/intel/module-name"
-}
 
 ```
 
