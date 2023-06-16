@@ -163,7 +163,7 @@ No modules.
 | <a name="input_intel_tags"></a> [intel\_tags](#input\_intel\_tags) | Intel Tags | `map(string)` | <pre>{<br>  "intel-module": "terraform-intel-azure-adx",<br>  "intel-registry": "https://registry.terraform.io/namespaces/intel"<br>}</pre> | no |
 | <a name="input_maximum_instances"></a> [maximum\_instances](#input\_maximum\_instances) | The User or Principal ID to grant access to the cluster and database. The prinicpal id should already exist | `string` | `"4"` | no |
 | <a name="input_minimum_instances"></a> [minimum\_instances](#input\_minimum\_instances) | The User or Principal ID to grant access to the cluster and database. The prinicpal id should already exist | `string` | `"2"` | no |
-| <a name="input_principal_id"></a> [principal\_id](#input\_principal\_id) | The User or Principal ID to grant access to the cluster and database. The prinicpal id should already exist | `string` | n/a | yes |
+| <a name="input_principal_id"></a> [principal\_id](#input\_principal\_id) | The Object ID of the User or Service Principal to grant access to the cluster and database. It should already exist | `string` | n/a | yes |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | Existing Resource Group where databricks reosurce will be created. | `string` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | A mapping of tags to assign to all resources. | `map(string)` | `{}` | no |
 
