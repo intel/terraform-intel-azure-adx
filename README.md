@@ -90,13 +90,14 @@ The Lsv3-series of Azure Virtual Machines (Azure VMs) features high-throughput, 
 Example of main.tf (located in the examples sub-folder)
 ```hcl
 
-## This module deploys a Azure Data Explorer with assigned pricipal in a user provided resource group
+## This module deploys a Azure Data Explorer with assigned principal in a user provided resource group
+## 'principal_id' should be the Azure AD Object ID of the User or Service Principal to grant access to the cluster and database. It should already exist, ex: 4631d538-f3e8-3457-b155-802b52e432525(this is a fake id)
 
 module "azure-dataexplorer" {
   source                = "intel/azure-adx/intel"
   resource_group_name   = "DS-KUSTO-RG1"
   adx_sku               = "Standard_E8d_v5"
-  principal_id          = "user@company.com"
+  principal_id          = "4631d538-f3e8-3457-b155-802b52e432525"
   tags = {
     Owner    = "user@company.com"
     Duration = "4"
@@ -106,6 +107,7 @@ module "azure-dataexplorer" {
 * **Prerequisites:**
 
   1. Have an existing Azure Resource Group in the region you want to deploy the Azure Data Explorer cluster 
+  2. Have an existing User or Service Principal and their Azure AD Object ID
 
 ```
 
@@ -161,7 +163,7 @@ No modules.
 | <a name="input_intel_tags"></a> [intel\_tags](#input\_intel\_tags) | Intel Tags | `map(string)` | <pre>{<br>  "intel-module": "terraform-intel-azure-adx",<br>  "intel-registry": "https://registry.terraform.io/namespaces/intel"<br>}</pre> | no |
 | <a name="input_maximum_instances"></a> [maximum\_instances](#input\_maximum\_instances) | The User or Principal ID to grant access to the cluster and database. The prinicpal id should already exist | `string` | `"4"` | no |
 | <a name="input_minimum_instances"></a> [minimum\_instances](#input\_minimum\_instances) | The User or Principal ID to grant access to the cluster and database. The prinicpal id should already exist | `string` | `"2"` | no |
-| <a name="input_principal_id"></a> [principal\_id](#input\_principal\_id) | The User or Principal ID to grant access to the cluster and database. The prinicpal id should already exist | `string` | n/a | yes |
+| <a name="input_principal_id"></a> [principal\_id](#input\_principal\_id) | The Object ID of the User or Service Principal to grant access to the cluster and database. It should already exist | `string` | n/a | yes |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | Existing Resource Group where databricks reosurce will be created. | `string` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | A mapping of tags to assign to all resources. | `map(string)` | `{}` | no |
 
