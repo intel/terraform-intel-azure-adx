@@ -51,7 +51,7 @@ variable "resource_group_name" {
 
 #Principal ID
 variable "principal_id" {
-  description = "The User or Principal ID to grant access to the cluster and database. The prinicpal id should already exist"
+  description = "The Object ID of the User or Service Principal to grant access to the cluster and database. It should already exist"
   type        = string
 }
 #Autoscale minimum_instances
