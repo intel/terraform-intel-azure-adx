@@ -2,9 +2,9 @@
   <img src="https://github.com/intel/terraform-intel-azure-adx/blob/main/images/logo-classicblue-800px.png?raw=true" alt="Intel Logo" width="250"/>
 </p>
 
-# Intel® Cloud Optimization Modules for Terraform
+# Intel® Optimized Cloud Modules for Terraform
 
-© Copyright 2022, Intel Corporation
+© Copyright 2024, Intel Corporation
 
 ## Azure Data Explorer
 The module can deploy an Azure Data Explorer cluster on Intel recommended Azure instances. Instance Selection have been defaulted in the code. This module was intended to be ran with an Intel Sentinel Policy as Code module that can be found here: https://registry.terraform.io/policies/intel/intel-azure/latest
@@ -130,13 +130,13 @@ More information regarding deploying Azure Data Explorer can be found here:[Azur
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=1.3.0 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~>3.52 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~>3.86 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~>3.52 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~>3.86 |
 | <a name="provider_random"></a> [random](#provider\_random) | n/a |
 
 ## Modules
