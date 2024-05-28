@@ -2,38 +2,20 @@
   <img src="./images/logo-classicblue-800px.png" alt="Intel Logo" width="250"/>
 </p>
 
-# Intel® Cloud Optimization Modules for Terraform  
+# Intel® Optimized Cloud Modules for Terraform  
 
-© Copyright 2022, Intel Corporation
+© Copyright 2024, Intel Corporation
 
 ## HashiCorp Sentinel Policies
 
-This file documents the HashiCorp Sentinel policies that apply to this module
+<b>What are Sentinel Policies?</b>
 
-## Policy 1
+HashiCorp Sentinel is a policy as code framework that can be used to enforce policies and standards across an organization's infrastructure. It allows organizations to define rules for their infrastructure using a high-level language, and integrates with a variety of HashiCorp tools, including Terraform and Vault. Sentinel policies are defined using the Sentinel language, and can be used to enforce rules such as compliance requirements, security best practices, and cost optimization. Sentinel policies can be implemented at different stages of the infrastructure development lifecycle, deployment, and runtime.
 
-Description: 
-Edv5-series virtual machines run on the 3rd Generation Intel® Xeon® Platinum 8370C (Ice Lake) processor reaching an all core turbo clock speed of up to 3.5 GHz. These virtual machines offer up to 104 vCPU and 672 GiB of RAM and fast, local SSD storage up to 3800 GiB. Edv5-series virtual machines are ideal for memory-intensive enterprise applications and applications that benefit from low latency, high-speed local storage.
+## Intel's Sentinel Policy Structure
 
-Esv5-series virtual machines run on the 3rd Generation Intel® Xeon® Platinum 8370C (Ice Lake) processor reaching an all core turbo clock speed of up to 3.5 GHz. These virtual machines offer up to 104 vCPU and 672 GiB of RAM. Esv5-series virtual machines don't have temporary storage thus lowering the price of entry.
+Reference the `intel-policy-library` [README.md](https://github.com/intel/intel-policy-library/blob/main/README.md#getting-started) for details on how to get started using our policies.
 
-The Lsv3-series of Azure Virtual Machines (Azure VMs) features high-throughput, low latency, directly mapped local NVMe storage. These VMs run on the 3rd Generation Intel® Xeon® Platinum 8370C (Ice Lake) processor in a hyper-threaded configuration. This new processor features an all-core turbo clock speed of 3.5 GHz with Intel® Turbo Boost Technology, Intel® Advanced-Vector Extensions 512 (Intel® AVX-512) and Intel® Deep Learning Boost.
+Intel® provides a list of `optimal` instance types per cloud resource, selected to deliver the best possible performance, security, and cost-efficiency for your cloud workloads. What sets this library apart is its dynamic nature; it is designed to automatically update, informing developers whenever more suitable hardware becomes available within their cloud environment, enabling them to make timely and informed decisions.
 
-Resource type: azurerm_kusto_cluster
-# For Compute Optimized instances, we recommend:
-Standard_E2d_v5
-Standard_E4d_v5 
-Standard_E8d_v5 
-Standard_E16d_v5 
-
-# For Storage Optimized instances, we recommend:
-Standard_L8sv3 
-Standard_L16sv3 
-Standard_L32sv3 
-Standard_E2sv5 
-Standard_E4sv5
-Standard_E8sv5
-Standard_E16sv5
-
-# For Isolated instances, we recommend:
-E80idsv4 
+This library also contains `recommended` instance types for AI and Confidential Computing workloads. For more information regarding Intel's AI and Confidential Computing capabilities and policies see the Intel® Xeon® Scalable Processors and Intel® Advanced Matrix Extensions (AMX) and Intel® Xeon® Scalable Processors and Confidential Computing sections in the [intel-policy-library](https://github.com/intel/intel-policy-library)
