@@ -160,7 +160,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_adx_sku"></a> [adx\_sku](#input\_adx\_sku) | Instance SKU, see comments above for guidance | `string` | `"Standard_E8d_v5"` | no |
 | <a name="input_enable_intel_tags"></a> [enable\_intel\_tags](#input\_enable\_intel\_tags) | If true adds additional Intel tags to resources | `bool` | `true` | no |
-| <a name="input_intel_tags"></a> [intel\_tags](#input\_intel\_tags) | Intel Tags | `map(string)` | <pre>{<br>  "intel-module": "terraform-intel-azure-adx",<br>  "intel-registry": "https://registry.terraform.io/namespaces/intel"<br>}</pre> | no |
+| <a name="input_intel_tags"></a> [intel\_tags](#input\_intel\_tags) | Intel Tags | `map(string)` | <pre>{<br/>  "intel-module": "terraform-intel-azure-adx",<br/>  "intel-registry": "https://registry.terraform.io/namespaces/intel"<br/>}</pre> | no |
 | <a name="input_maximum_instances"></a> [maximum\_instances](#input\_maximum\_instances) | The User or Principal ID to grant access to the cluster and database. The prinicpal id should already exist | `string` | `"4"` | no |
 | <a name="input_minimum_instances"></a> [minimum\_instances](#input\_minimum\_instances) | The User or Principal ID to grant access to the cluster and database. The prinicpal id should already exist | `string` | `"2"` | no |
 | <a name="input_principal_id"></a> [principal\_id](#input\_principal\_id) | The Object ID of the User or Service Principal to grant access to the cluster and database. It should already exist | `string` | n/a | yes |
